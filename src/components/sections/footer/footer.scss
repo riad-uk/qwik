@@ -1,0 +1,26 @@
+@import "../../tokens.scss";
+
+footer {
+  background-color: $color-blue-rw-dark;
+  padding: 100px 0;
+  nav {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    ul {
+      width: 25%;
+      color: $color-white-01;
+      font-size: 14px;
+      li {
+        // margin-bottom: 15px;
+        padding: 0.7rem 0;
+        display: block;
+        height: auto;
+        font-weight: 300;
+        &:first-child {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

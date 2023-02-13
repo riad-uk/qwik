@@ -1,0 +1,32 @@
+@import "../src/components/tokens.scss";
+
+.homepage {
+    // background-color: red;
+    h1, p {
+        color: $color-blue-rw-dark;
+    }
+
+    .button {
+        background-color: $color-blue-rw-dark;
+    }
+
+    .home-img {
+        max-width: 600px;
+    }
+
+}
+
+.riad-counter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 30px;
+    color: #106036;
+    button {
+        background-color: #106036 !important;
+        background: #106036;
+    }
+}

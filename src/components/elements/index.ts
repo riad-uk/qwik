@@ -1,0 +1,1 @@
+export { default as IntuitLogo } from "./intuit-logo/intuit-logo"

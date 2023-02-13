@@ -1,0 +1,182 @@
+$color-green-01: #108000;
+$color-green-01-alt: #0d7300; // *EXPERIMENTAL COLORS - DO NOT USE WITHOUT QUICKBOOKS BRAND PERMISSION
+$color-green-02: #2ca01c; // QuickBooks Green
+$color-green-02-alt: #0e8900; // *EXPERIMENTAL COLORS - DO NOT USE WITHOUT QUICKBOOKS BRAND PERMISSION
+$color-green-03: #53b700;
+$color-green-04: #7fd000;
+$color-green-05: #a9e838;
+$color-green-rw-mint: #94f8ba; // Reimagine color
+$color-green-rw-green: #0fd46c; // Reimagine color
+$color-green-rw-dark: #0a8543; // Reimagine color
+$color-green-rw-light: #e8f5e3; // Reimagine color
+$color-grey-01: #393a3d; // QuickBooks Dark Grey
+$color-grey-02b: #6b6c72;
+$color-grey-03b: #8d9096;
+$color-grey-04b: #babec5;
+$color-grey-05: #d4d7dc;
+$color-grey-06: #e3e5e8;
+$color-grey-07: #eceef1; // QuickBooks Light Grey
+$color-grey-dario: #edf3ec;
+$color-grey-08b: #f4f5f8;
+$color-grey-09: #ebeef1;
+$color-grey-10: #e2e5e8;
+$color-grey-rw-grey-01: #e5e5e5;
+$color-red-01: #b80000;
+$color-red-02: #d52b1e;
+$color-blue-00: #053d6d;
+$color-blue-01: #055393;
+$color-blue-02b: #0077c5; // Text link
+$color-blue-03: #0097e6;
+$color-blue-04: #21abf6;
+$color-blue-05: #34bfff; // Button inverse focus outline
+$color-blue-rw-dark: #0d333f; // Reimagine color
+$color-blue-rw-light: #d8eaeb; // Reimagine color
+$color-blue-rw-light-blue: #00d7d7; // Reimagine color
+$color-blue-rw-sky: #dbedee; // Reimagine color
+$color-teal-01: #008481;
+$color-teal-02: #00a6a4;
+$color-teal-03: #00c1bf;
+$color-teal-04: #00d7d7;
+$color-purple-03: #7a3dd8;
+$color-yellow-01: #fff59b;
+$color-yellow-02: #ffbb00;
+$color-pink-02: #c9007a;
+$color-pink-03: #e31c9e;
+$color-orange-01: #f95700;
+$color-orange-02: #ff6a00;
+$color-orange-03: #ff8000;
+$color-orange-04: #ff6a00;
+$color-orange-05: #f95700;
+$color-orange-rw: #ff8540; // Used on Badge
+$color-orange-rw-orange: #ff8540; // Used on Badge
+$color-gold-01: #a98343;
+$color-gold-02: #c4974d;
+$color-gold-03: #d2aa64;
+$color-gold-04: #e0bd7b;
+$color-gold-05: #eed092;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-accounting: #53b700;
+$color-payroll: #e31c9e;
+$color-payments: #0097e6;
+$color-time-tracking: #ff8000;
+
+// BREAKPOINTS
+$breakpoints-tiny: 360px;
+$breakpoints-xsmall: 480px;
+$breakpoints-small: 768px;
+$breakpoints-small-2: 992px;
+$breakpoints-medium: 1024px;
+$breakpoints-large: 1200px;
+$breakpoints-xlarge: 1440px;
+
+// COLORS
+
+// Standard Blues
+$color-blue-01: #13495b;
+$color-blue-02: #16586d;
+$color-blue-03: #0d333f; // Base blue
+$color-blue-04: #1b6a83;
+$color-blue-05: #21809f;
+$color-blue-06: #289bc0;
+$color-blue-07: #007dd8; // Text link
+
+// Standard Greys
+$color-grey-01: #bdc8bb;
+$color-grey-02: #cbd6d2;
+$color-grey-03: #edf2f2; // Base grey
+$color-grey-04: #edf3ec;
+$color-grey-05: #f1f6f1;
+$color-grey-06: #f6f9f6;
+$color-grey-07: #dce7da;
+$color-grey-08: #393a3d;
+
+// Standard Greens
+$color-green-01: #0a8543;
+$color-green-02: #2ca01c; // Base green
+$color-green-03: #0fd46c;
+
+//new HP AB
+$color-beige-01: #f3f2ef;
+
+// Fun colors
+$color-fun-blue-01: #00b3ff;
+$color-fun-yellow-01: #fff06a;
+$color-fun-orange-01: #ff8540;
+$color-fun-pink-01: #eb3476;
+$color-fun-purple-01: #c597ff;
+
+// Boring ones
+$color-black-01: #000000;
+$color-white-01: #ffffff;
+
+// Negative colours
+$color-red-01: #d52c1f;
+
+// FONT SIZES
+// Headings
+$heading-01: 60px;
+$heading-02: 36px;
+$heading-03: 18px;
+
+// Text
+$text-01: 20px;
+$text-02: 16px;
+$text-03: 12px;
+
+/* Custom Mixins */
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin container {
+  max-width: 1440px;
+  padding: 0 40px;
+  margin: auto;
+}
+
+@mixin m-up {
+  @media (min-width: $breakpoints-medium) {
+    @content;
+  }
+}
+
+@mixin l-up {
+  @media (min-width: $breakpoints-large) {
+    @content;
+  }
+}
+
+@mixin xlarge-up {
+  @media (min-width: $breakpoints-xlarge) {
+    @content;
+  }
+}
+
+@mixin transall {
+  transition: all 0.5s ease;
+}
+
+@mixin boxShadow-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@mixin boxShadow-2 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+@mixin boxShadow-3 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+@mixin boxShadow-4 {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+@mixin boxShadow-5 {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
