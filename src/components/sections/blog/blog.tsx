@@ -1,5 +1,7 @@
 /* eslint-disable no-console */
 import { component$, Resource, useResource$ } from "@builder.io/qwik";
+import { Link } from '@builder.io/qwik-city';
+
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 import contentful from "contentful";
@@ -35,9 +37,13 @@ export default component$(() => {
             // The loop
             return content.map((item) => {
               const fields = item.fields;
+              console.log(item);
               const articleText = documentToHtmlString(fields.articleText);
               return (
                 <section class="py-10 sm:py-16 lg:py-16 container mx-auto">
+                  
+        
+
                   <div class="px-4 mx-auto sm:px-6 lg:px-8">
                     <div class="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
                       <div>
@@ -62,12 +68,7 @@ export default component$(() => {
                           >
                             Buy Now & Save{" "}
                           </a>
-                          <a
-                            href="#"
-                            title=""
-                            class="inline-flex items-center mt-6 text-base font-semibold transition-all duration-200 sm:mt-0 hover:opacity-80"
-                            onClick$={() => alert("Watch video")}
-                          >
+                          <a href={`/posts/${item.sys.id}`} class="my-link">
                             <svg
                               class="w-10 h-10 mr-3"
                               xmlns="http://www.w3.org/2000/svg"
@@ -104,6 +105,7 @@ export default component$(() => {
                       </div>
                     </div>
                   </div>
+           
                 </section>
               );
             })
