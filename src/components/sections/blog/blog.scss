@@ -1,0 +1,82 @@
+.single-post {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0 0 30px 0;
+  & > div {
+    display: flex;
+    padding: 50px;
+    width: 50vw;
+    transition: all 0.5s ease;
+  }
+  .content-block {
+    width: 50%;
+    transition: all 0.5s ease;
+    flex-direction: column;
+    transition: all 0.5s ease;
+    button {
+      margin-top: 30px;
+    }
+  }
+  .image-block {
+    height: 300px;
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
+    transition: all 0.5s ease;
+  }
+
+  &.active {
+    // position: absolute;
+    // height: 100vh;
+    // top: 0;
+    // left: 0;
+    // width: 100vw;
+    animation: 3s ease 1s;
+    .content-block {
+      opacity: 0;
+      // transition: all 0.5s ease;
+      // animation: 3s
+      animation: 3s ease 1s;
+      //   order: 2;
+      //   display: none;
+    }
+    .image-block {
+      transition: all 0.5s ease;
+      height: 100vh;
+      animation: myship 2s;
+      // animation-delay: 2s;
+      position: absolute;
+      right: 0;
+      // position: absolute;
+      // left: 0;
+      //   order: 1;
+    }
+  }
+}
+
+@keyframes myframe {
+  from {
+    right: 480px;
+  }
+  to {
+    right: 20px;
+  }
+}
+@-moz-keyframes myframe {
+  from {
+    right: 480px;
+  }
+  to {
+    right: 20px;
+  }
+}
+@-webkit-keyframes myframe {
+  from {
+    left: 480px;
+  }
+  to {
+    left: 20px;
+  }
+}

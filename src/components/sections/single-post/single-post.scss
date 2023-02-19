@@ -1,0 +1,31 @@
+.single-post-page {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  & div {
+    width: 50%;
+    img {
+      height: 100vh;
+    }
+
+    &.data-block {
+      padding: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h1 {
+        margin: 0;
+        padding: 0;
+      }
+      & div {
+        width: 100% !important;
+      }
+    }
+
+    &.image-block {
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
