@@ -79,7 +79,18 @@ export default component$(() => {
                       CLICK ME!
                     </a>
 
-                    <a href={`/posts/${slug}`} class="my-link">
+                    <a
+                      preventdefault:click
+                      onClick$={() => {
+                        setTimeout(function () {
+                          window.location.href = `#${slug}`;
+                        }, 1000);
+                        state.activeSlug = slug;
+                        setTimeout(function () {
+                          window.location.href = `/posts/${slug}`;
+                        }, 3000);
+                      }}
+                    >
                       <button
                         type="button"
                         class="inline-flex items-center px-6 py-2 text-sm font-medium text-center rounded text-white bg-green-700 hover:bg-green-800"
