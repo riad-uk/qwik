@@ -14,6 +14,9 @@ import contentful from "contentful";
 export default component$(() => {
   useStylesScoped$(styles);
 
+  // const nav = useNavigate();
+  const nav = useNavigate();
+
   const state = useStore({ activeSlug: "" });
 
   console.log("loaded");
@@ -30,10 +33,9 @@ export default component$(() => {
   });
 
   console.log("Render");
-
   return (
     <div>
-      <div>
+      <div class={`posts-wrapper`} id="posts-wrapper">
         {/* Loading States of the call */}
         <Resource
           value={contentfulResource}
@@ -51,6 +53,7 @@ export default component$(() => {
                   class={`single-post ${
                     state.activeSlug === slug ? "active" : ""
                   }`}
+                  id={`${slug}`}
                 >
                   <div class="content-block">
                     <h1 class="text-2xl font-bold text-black sm:text-6xl lg:text-5xl">
@@ -62,11 +65,15 @@ export default component$(() => {
                     ></div>
 
                     <a
-                      onClick$={(event) => {
-                        event.preventDefault();
+                      preventdefault:click
+                      onClick$={() => {
+                        setTimeout(function () {
+                          window.location.href = `#${slug}`;
+                        }, 1000);
                         state.activeSlug = slug;
-                        console.log("clicked");
-                        // useNavigate(/posts/${slug});
+                        setTimeout(function () {
+                          window.location.href = `/posts/${slug}`;
+                        }, 3000);
                       }}
                     >
                       CLICK ME!
@@ -96,7 +103,9 @@ export default component$(() => {
                     </a>
                   </div>
                   <div
-                    class="image-block"
+                    class={`image-block ${
+                      state.activeSlug === slug ? "active" : ""
+                    }`}
                     style={{
                       backgroundImage: `url(${fields.articleImage.fields.file.url})`,
                     }}
@@ -106,6 +115,72 @@ export default component$(() => {
             });
           }}
         />
+        <section class="bg-white dark:bg-gray-900">
+          <div class="container px-6 py-10 mx-auto animate-pulse">
+            <h1 class="w-48 h-2 mx-auto bg-gray-200 rounded-lg dark:bg-gray-700"></h1>
+
+            <p class="w-64 h-2 mx-auto mt-4 bg-gray-200 rounded-lg dark:bg-gray-700"></p>
+            <p class="w-64 h-2 mx-auto mt-4 bg-gray-200 rounded-lg sm:w-80 dark:bg-gray-700"></p>
+
+            <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3">
+              <div class="w-full ">
+                <div class="w-full h-64 bg-gray-300 rounded-lg dark:bg-gray-600"></div>
+
+                <h1 class="w-56 h-2 mt-4 bg-gray-200 rounded-lg dark:bg-gray-700"></h1>
+                <p class="w-24 h-2 mt-4 bg-gray-200 rounded-lg dark:bg-gray-700"></p>
+              </div>
+
+              <div class="w-full ">
+                <div class="w-full h-64 bg-gray-300 rounded-lg dark:bg-gray-600"></div>
+
+                <h1 class="w-56 h-2 mt-4 bg-gray-200 rounded-lg dark:bg-gray-700"></h1>
+                <p class="w-24 h-2 mt-4 bg-gray-200 rounded-lg dark:bg-gray-700"></p>
+              </div>
+
+              <div class="w-full ">
+                <div class="w-full h-64 bg-gray-300 rounded-lg dark:bg-gray-600"></div>
+
+                <h1 class="w-56 h-2 mt-4 bg-gray-200 rounded-lg dark:bg-gray-700"></h1>
+                <p class="w-24 h-2 mt-4 bg-gray-200 rounded-lg dark:bg-gray-700"></p>
+              </div>
+
+              <div class="w-full ">
+                <div class="w-full h-64 bg-gray-300 rounded-lg dark:bg-gray-600"></div>
+
+                <h1 class="w-56 h-2 mt-4 bg-gray-200 rounded-lg dark:bg-gray-700"></h1>
+                <p class="w-24 h-2 mt-4 bg-gray-200 rounded-lg dark:bg-gray-700"></p>
+              </div>
+
+              <div class="w-full ">
+                <div class="w-full h-64 bg-gray-300 rounded-lg dark:bg-gray-600"></div>
+
+                <h1 class="w-56 h-2 mt-4 bg-gray-200 rounded-lg dark:bg-gray-700"></h1>
+                <p class="w-24 h-2 mt-4 bg-gray-200 rounded-lg dark:bg-gray-700"></p>
+              </div>
+
+              <div class="w-full ">
+                <div class="w-full h-64 bg-gray-300 rounded-lg dark:bg-gray-600"></div>
+
+                <h1 class="w-56 h-2 mt-4 bg-gray-200 rounded-lg dark:bg-gray-700"></h1>
+                <p class="w-24 h-2 mt-4 bg-gray-200 rounded-lg dark:bg-gray-700"></p>
+              </div>
+
+              <div class="w-full ">
+                <div class="w-full h-64 bg-gray-300 rounded-lg dark:bg-gray-600"></div>
+
+                <h1 class="w-56 h-2 mt-4 bg-gray-200 rounded-lg dark:bg-gray-700"></h1>
+                <p class="w-24 h-2 mt-4 bg-gray-200 rounded-lg dark:bg-gray-700"></p>
+              </div>
+
+              <div class="w-full ">
+                <div class="w-full h-64 bg-gray-300 rounded-lg dark:bg-gray-600"></div>
+
+                <h1 class="w-56 h-2 mt-4 bg-gray-200 rounded-lg dark:bg-gray-700"></h1>
+                <p class="w-24 h-2 mt-4 bg-gray-200 rounded-lg dark:bg-gray-700"></p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
