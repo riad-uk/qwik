@@ -64,7 +64,7 @@ export default component$(() => {
                       dangerouslySetInnerHTML={articleText}
                     ></div>
 
-                    <a
+                    {/* <a
                       preventdefault:click
                       onClick$={() => {
                         setTimeout(function () {
@@ -77,7 +77,7 @@ export default component$(() => {
                       }}
                     >
                       CLICK ME!
-                    </a>
+                    </a> */}
 
                     <a
                       preventdefault:click
@@ -86,6 +86,7 @@ export default component$(() => {
                           window.location.href = `#${slug}`;
                         }, 1000);
                         state.activeSlug = slug;
+                        // Check if reduce motion is available
                         setTimeout(function () {
                           window.location.href = `/posts/${slug}`;
                         }, 3000);

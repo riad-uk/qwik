@@ -99,23 +99,6 @@ body::-webkit-scrollbar {
   to {
     transform: translateX(-100%);
   }
-  // from {
-  //   transform: translateX(0);
-  //   // height: auto;
-  // }
-
-  // 30% {
-  //   height: 100vh;
-  // }
-
-  // 70% {
-  //   height: 100vh;
-  // }
-
-  // 100% {
-  //   transform: translateX(-100%);
-  //   height: 100vh;
-  // }
 }
 
 @keyframes transheight {
